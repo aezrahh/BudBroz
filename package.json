@@ -1,0 +1,23 @@
+{
+  "name": "budbroz",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cannabis delivery marketplace: customer app, dispensary portal, driver app, admin and API",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "typecheck": "tsc -b packages/compliance services/api",
+    "dev:api": "npm run dev -w @budbroz/api"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "typescript": "^5.9.3"
+  }
+}
